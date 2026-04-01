@@ -1,0 +1,11 @@
+# ── Modal platform ────────────────────────────────────────────────────────────
+modal>=0.73.0
+
+# ── Local PDF rendering (no poppler needed) ───────────────────────────────────
+pymupdf>=1.24.0          # fitz — pure Python + C, ships its own MuPDF
+
+# ── Config (loaded in modal_app.py & scripts) ─────────────────────────────────
+pyyaml>=6.0
+
+# ── HTTP client ────────────────────────────────────────────────────────────────
+httpx>=0.27.0

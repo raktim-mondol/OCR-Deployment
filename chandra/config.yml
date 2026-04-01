@@ -1,0 +1,38 @@
+# Chandra OCR 2 — Hyperparameters
+# Edit these values and re-deploy with: modal deploy chandra/modal_app.py
+
+model:
+  name: "datalab-to/chandra-ocr-2"
+  path: "/model/chandra-ocr-2"
+
+gpu:
+  type: "L40S:1"              # Modal GPU spec
+  max_containers: 5            # parallel PDFs (one container per PDF)
+  max_concurrent_pages: 2      # pages in-flight per container
+  timeout: 5000                # seconds (30 min)
+  scaledown_window: 120        # seconds
+
+vllm:
+  port: 8000
+  dtype: "bfloat16"
+  gpu_memory_utilization: 0.90
+  max_num_batched_tokens: 65536
+  max_num_seqs: 4
+  max_model_len: 8192
+  min_pixels: 3136
+  max_pixels: 602112
+
+pdf:
+  dpi: 150                     # PDF → JPEG resolution (per page)
+  jpeg_quality: 95             # JPEG quality (1–100)
+
+ocr:
+  max_tokens: 4096
+  temperature: 0.0
+  page_timeout: 500.0          # seconds — vLLM request timeout
+  max_retries: 3               # per-page retry attempts
+  retry_backoff_base: 2        # exponential backoff: 2^attempt seconds
+
+modal_retries:
+  max_retries: 2               # container-level retries
+  backoff_coefficient: 2.0     # 2s, 4s, 8s ...
