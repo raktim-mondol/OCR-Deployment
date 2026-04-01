@@ -1,6 +1,6 @@
 # Chandra OCR 2
 
-Academic PDF → Markdown extraction powered by [Chandra OCR 2](https://github.com/datalab-to/chandra-ocr-2) on [Modal](https://modal.com). Converts multi-page PDFs into clean, structured Markdown using a vLLM-served multimodal vision-language model on L40S GPUs.
+Academic PDF → Markdown extraction powered by Chandra OCR 2 on [Modal](https://modal.com). Converts multi-page PDFs into clean, structured Markdown using a vLLM-served multimodal vision-language model on L40S GPUs.
 
 ## Architecture
 
