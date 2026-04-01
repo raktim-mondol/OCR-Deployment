@@ -276,4 +276,4 @@ Cold-start is expected — vLLM loads the model at container boot (~2-5 min). Th
 
 ## License
 
-This project is for research and deployment use. The underlying model (Chandra OCR 2) is licensed under its own terms — see the [Chandra OCR 2 repository](https://github.com/datalab-to/chandra-ocr-2) for model licensing details.
+This project is for research and deployment use. The underlying model (Chandra OCR 2) is licensed under its own terms — see the Chandra OCR 2 repository for model licensing details.
